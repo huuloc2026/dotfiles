@@ -1,4 +1,6 @@
 local wezterm = require("wezterm")
+
+
 local act = wezterm.action
 return {
 	automatically_reload_config = true,
@@ -8,7 +10,7 @@ return {
 	default_cursor_style = "BlinkingBar",
 	color_scheme = "Nord (Gogh)",
 	font = wezterm.font("JetBrains Mono", { weight = "Bold" }),
-	font_size = 12.5,
+	font_size = 13,
 	background = {
 		{
 			source = {
@@ -20,12 +22,12 @@ return {
 				saturation = 1.02,
 				brightness = 0.25,
 			},
-			width = "100%",
-			height = "100%",
+			width = "120%",
+			height = "150%",
 		},
 		{
 			source = {
-				Color = "#283c35",
+				Color = "#183c35",
 			},
 			width = "100%",
 			height = "100%",
@@ -33,10 +35,10 @@ return {
 		},
 	},
 	window_padding = {
-		left = 3,
-		right = 3,
-		top = 0,
-		bottom = 0,
+		left = 10,
+		right = 10,
+		top = 10,
+		bottom = 10,
 	},
 	keys = {
 		{

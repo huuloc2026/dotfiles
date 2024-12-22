@@ -67,7 +67,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="%d-%m-%Y %H:%M:%S"
+
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -109,13 +110,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gh=""
+alias gh="cd ~/ && echo 'Went back home' "
+alias ls="eza --icons=always" #notes: install eza
+alias cd="z"
+eval "$(zoxide init zsh)" 
+
+#
 alias gcf="cd ~/.config/"
 alias rl="source ~/dotfiles/zsh/.zshrc"
 alias czsh="nvim ~/dotfiles/zsh/.zshrc"
+alias dc="docker compose"
+alias mg="brave-browser --newtab 'https://github.com/huuloc2026?tab=repositories' "
+
 
 # Alias to search Google
-alias gg="function _gg(){ brave-browser --new-tab 'https://www.google.com/search?q='$(echo $1 | sed 's/ /+/g'); }; _gg"
+alias gg='function _google() { brave-browser --new-tab "https://www.google.com/search?q=$(echo "$*" | sed "s/ /+/g")"; }; _google'
+
+
 
 # Alias to search YouTube
 alias yt="function _yt(){ brave-browser --new-tab 'https://www.youtube.com/results?search_query='$(echo $1 | sed 's/ /+/g'); }; _yt"
@@ -126,6 +137,7 @@ alias gpt="function _gpt(){ brave-browser --new-tab 'https://chat.openai.com/cha
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
