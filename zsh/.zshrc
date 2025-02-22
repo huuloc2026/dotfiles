@@ -117,17 +117,24 @@ alias cd="z"
 eval "$(zoxide init zsh)" 
 
 #
+alias yd="yarn run dev"
 alias gcf="cd ~/.config/"
 alias rl="source ~/dotfiles/zsh/.zshrc"
-alias czsh="nvim ~/dotfiles/zsh/.zshrc"
-alias dc="docker compose"
+alias cfzsh="nvim ~/dotfiles/zsh/.zshrc"
 alias dcu="docker compose up -d"
-alias dcps="docker ps"
-alias dcs="docker stop"
+alias dcps="docker ps -a"
+alias dcd="docker compose down"
+alias keyboardconfig="sudo nano /etc/X11/xorg.conf.d/99-disable-laptop-keyboard.conf"
+alias rmnode="rm -rf node_modules"
+#alias sharedesktop = "cd ~/usr/share/applications"
 #shorthand
 alias mg="brave-browser --newtab 'https://github.com/huuloc2026?tab=repositories' "
+alias mm="brave-browser --newtab 'https://mail.google.com/mail/u/1/#inbox' "
+
 # Alias to search Google
 alias gg='function _google() { brave-browser --new-tab "https://www.google.com/search?q=$(echo "$*" | sed "s/ /+/g")"; }; _google'
+
+alias postman='/home/huuloc/Desktop/postman-linux-x64/Postman/app/Postman --disable-gpu'
 
 
 
@@ -145,3 +152,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$PATH:/usr/local/bin"
+
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

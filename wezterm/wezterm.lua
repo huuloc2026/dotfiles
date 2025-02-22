@@ -3,6 +3,7 @@ local wezterm = require("wezterm")
 
 local act = wezterm.action
 return {
+
 	automatically_reload_config = true,
 	enable_tab_bar = false,
 	window_close_confirmation = "NeverPrompt",
@@ -10,13 +11,13 @@ return {
 	default_cursor_style = "BlinkingBar",
 	color_scheme = "Abernathy",
 	font = wezterm.font("JetBrains Mono", { weight = "Bold" }),
-	font_size = 13,
+	font_size = 10,
+
 	background = {
 		{
 			source = {
 				File = "/home/huuloc/Pictures/5.jpg",
 			},
-
 			hsb = {
 				hue = 1,
 				saturation = 1,
@@ -27,11 +28,12 @@ return {
 		},
 		{
 			source = {
-				Color = "#111111",
+				Color = "#000111",
 			},
 			width = "100%",
 			height = "100%",
 			opacity = 0.75,
+
 		},
 	},
 	window_padding = {
@@ -81,6 +83,12 @@ return {
         key = "l",
         action = wezterm.action.ActivatePaneDirection "Right"
     },
+	{
+      key = "m", -- Phím bạn muốn dùng
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.Hide,
+    },
+	
 		
 	},
 	
